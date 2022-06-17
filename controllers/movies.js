@@ -1,5 +1,21 @@
 import { Movie } from '../models/movie.js'
 
+
+
+function index(req, res) {
+    Movie.find({})
+        .then(movies => {
+            res.render('movies/index', {
+                movies: movies,
+                title: "All Movies"
+
+            })
+        })
+        .catch(error => {
+            console.log(error)
+            res.redirect('/movies')
+        })
+}
 function newMovie(req, res) {
     res.render('movies/new', {
         title: 'Add movie'
@@ -16,13 +32,16 @@ function create(req, res) {
     }
     Movie.create(req.body)
         .then(movie => {
-            res.redirect(`/movies/new`)
+            res.redirect(`/movies`)
         })
         .catch(err => {
-            res.redirect('/movies/new')
+            res.redirect('/movies')
         })
 }
+
+
 export {
     newMovie as new,
     create,
+    index,
 }
