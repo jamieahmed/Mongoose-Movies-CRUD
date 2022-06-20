@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 import 'dotenv/config.js'
-=======
-import "dotenv/config.js"
->>>>>>> 357b23c86ad41b2fedf42a801e36e4072f372b00
 import createError from 'http-errors'
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import logger from 'morgan'
-<<<<<<< HEAD
 import('./config/database.js')
 import methodOverride from 'method-override'
-=======
-// Connect to the database with Mongoose
-import('./config/database.js')
->>>>>>> 357b23c86ad41b2fedf42a801e36e4072f372b00
 
 // import routers
 import { router as indexRouter } from './routes/index.js'

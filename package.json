@@ -12,10 +12,7 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "http-errors": "^2.0.0",
-<<<<<<< HEAD
     "method-override": "^3.0.0",
-=======
->>>>>>> 357b23c86ad41b2fedf42a801e36e4072f372b00
     "mongoose": "^6.3.8",
     "morgan": "^1.10.0"
   }
